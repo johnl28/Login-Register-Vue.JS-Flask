@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Test from '@/components/Test'
 import login from '@/components/login'
-import roullete from '@/components/roullete'
+import home from '@/components/home'
 import register from '@/components/register'
+import profile from '@/components/profile'
+import watch from '@/components/watch'
 
 Vue.use(Router)
 
@@ -11,20 +13,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Roullete',
-      component: roullete
+      name: '/',
+      component: home,
+      meta: { title: 'Home' }
     },
     {
-      path: '/test/:id/:test/:d',
-      name: 'Test',
-      component: Test
+      path: '/profile/:id',
+      name: 'Profile',
+      component: profile,
+      meta: { title: 'Profile' }
     },
     {
       path: '/login',
       name: 'login',
       component: login,
 
-      meta: { title: 'Dashboard' }
+      meta: { title: 'Login' }
     },
     {
       path: '/register',
@@ -32,6 +36,13 @@ export default new Router({
       component: register,
 
       meta: { title: 'Register' }
+    },
+    {
+      path: '/watch',
+      name: 'watch',
+      component: watch,
+
+      meta: { title: 'Watch' }
     },
   ]
 })

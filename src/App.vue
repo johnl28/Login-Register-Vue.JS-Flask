@@ -2,15 +2,25 @@
 
 <template>
 <div id="app">
-	<head>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-	</head>
+
+
+
+	<div v-if="$root.$cookie.get('session_id')">
 	<navigation></navigation>
+	</div>
+	<div v-if="$root.down" class="alert alert-danger" role="alert">
+		<h4 class="alert-heading">Server connection error</h4>
+		<p>Couldn't connect the client to the server.</p>
+		<hr>
+		<p class="mb-0">Try to refresh the page.</p>
+	</div>
+
 	<body>
 		<transition name="fade" mode="out-in">
 			<router-view/>
 		</transition>
 	</body>
+	
 </div>
 </template>
 
@@ -29,5 +39,6 @@ body
 {
 	background-color: #222326;   
 }
+
 </style>
 

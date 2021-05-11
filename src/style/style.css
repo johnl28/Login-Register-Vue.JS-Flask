@@ -21,6 +21,7 @@ body {
 }
 
 
+
 .button {
 	position:relative;
 	width: auto;
@@ -77,4 +78,13 @@ body {
 	-webkit-box-shadow: 0px 6px 0px #002ad365;
 	-moz-box-shadow: 0px 6px 0px #0020d491;
 	box-shadow: 0px 6px 0px #0007d47e;
+}
+
+.button-gray {
+	border:solid 1px #ffffff1b;
+	background:#ffffff00;    
+	height: 50px;
+	-webkit-box-shadow: 0px 6px 0px #ffffff5f;
+	-moz-box-shadow: 0px 6px 0px #ffffff59;
+	box-shadow: 0px 6px 0px #ffffff4d;
 }
